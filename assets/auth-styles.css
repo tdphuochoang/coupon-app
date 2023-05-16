@@ -1,0 +1,28 @@
+.amplify-button {
+	color: #82b440;
+	background: transparent;
+}
+
+.amplify-button:hover {
+	background: transparent;
+	border-color: #82b440;
+}
+
+.amplify-button[data-variation="primary"] {
+	background: #82b440;
+	color: white;
+}
+
+.amplify-tabs-item {
+	border: #82b440;
+}
+
+[data-amplify-authenticator] {
+	--amplify-components-tabs-item-active-color: #82b440;
+	--amplify-components-tabs-item-focus-color: #82b440;
+	--amplify-components-tabs-item-hover-color: #82b440;
+
+	--amplify-components-button-link-active-background-color: transparent;
+	--amplify-components-button-link-focus-background-color: transparent;
+	--amplify-components-button-link-hover-background-color: transparent;
+}

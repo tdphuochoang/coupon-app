@@ -4,7 +4,7 @@
 	>
 		<!--Logo-->
 		<div class="my-3 md:my-1">
-			<Logo />
+			<Logo @click="refreshPage" />
 		</div>
 
 		<!--Search engine-->
@@ -28,6 +28,7 @@
 					v-model="searchQuery"
 				/>
 			</div>
+
 			<button
 				type="submit"
 				class="p-3 ml-2 text-sm font-medium text-white bg-dim-50 rounded-lg border border-dim-150 hover:bg-dim-150 focus:ring-4 focus:outline-none focus:ring-dim-25 transition ease-in-out duration-350"
@@ -40,7 +41,7 @@
 
 		<!--Button-->
 
-		<Button>Logout</Button>
+		<Button @click="signOut">Logout</Button>
 	</div>
 </template>
 
@@ -55,6 +56,10 @@ export default {
 		search() {
 			this.$emit("search", this.searchQuery);
 		},
+		refreshPage() {
+			this.$router.go(); // Refreshes the current route
+		},
 	},
+	props: ["user", "signOut"],
 };
 </script>
